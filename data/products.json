@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Quilted Chain Handbag",
+    "category": "Luxury Gifts",
+    "price": 85.00,
+    "description": "Black quilted handbag with a gold chain strap and turn-lock clasp.",
+    "inStock": true
+  },
+  {
+    "id": 2,
+    "name": "Signature Gift Box",
+    "category": "Luxury Gifts",
+    "price": 35.00,
+    "description": "Black gift box with a satin gold ribbon, ready for any occasion.",
+    "inStock": true
+  },
+  {
+    "id": 3,
+    "name": "Classic Tailored Blazer",
+    "category": "Stylish Fashion",
+    "price": 60.00,
+    "description": "Black tailored blazer, part of the everyday staples collection.",
+    "inStock": true
+  },
+  {
+    "id": 4,
+    "name": "Gold Chain Necklace",
+    "category": "Timeless Pieces",
+    "price": 45.00,
+    "description": "Delicate gold-tone chain necklace for everyday elegance.",
+    "inStock": true
+  }
+]

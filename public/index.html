@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Everything Grandeur — Boutique Fashion & Luxury Gifts in Gweru, Zimbabwe</title>
+<meta name="description" content="Everything Grandeur is a curated boutique in Gweru, Zimbabwe offering classy fashion, luxury-inspired gifts, and timeless pieces. Visit our shop on Cnr 7th and Lobengula Ave, or order with delivery available.">
+<meta name="keywords" content="Everything Grandeur, boutique Gweru, fashion shop Gweru, luxury gifts Zimbabwe, gift shop Gweru, timeless fashion, Bulawayo boutique">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://everythinggrandeur.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Everything Grandeur — Boutique Fashion & Luxury Gifts in Gweru">
+<meta property="og:description" content="A curated space for classy fashion, luxury-inspired gifts, and timeless pieces. Visit us in Gweru or get deliveries.">
+<meta property="og:url" content="https://everythinggrandeur.com/">
+<meta property="og:locale" content="en_ZW">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ClothingStore",
+  "name": "Everything Grandeur",
+  "description": "A curated boutique offering classy fashion, luxury-inspired gifts, and timeless pieces.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Cnr 7th and Lobengula Ave",
+    "addressLocality": "Gweru",
+    "addressCountry": "ZW"
+  },
+  "telephone": "+263771234567",
+  "priceRange": "$$"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black: #0a0908;
+    --panel: #14110d;
+    --gold: #c9a24b;
+    --gold-lt: #e9cf8b;
+    --gold-dim: #7a6339;
+    --cream: #f4ecdd;
+    --cream-dim: #cfc4ac;
+    --line: rgba(201,162,75,0.28);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--black);
+    color:var(--cream);
+    font-family:'Jost', sans-serif;
+    font-weight:300;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--gold); color:var(--black);}
+
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond', serif;}
+  .caps{font-family:'Cinzel', serif; letter-spacing:0.22em; text-transform:uppercase;}
+
+  a{color:inherit; text-decoration:none;}
+
+  /* ---------- texture layer ---------- */
+  .grain{
+    position:fixed; inset:0; pointer-events:none; z-index:999; opacity:0.045; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ---------- nav ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:22px 6vw;
+    background:linear-gradient(to bottom, rgba(10,9,8,0.9), transparent);
+    transition:background .4s ease, padding .4s ease;
+  }
+  header.scrolled{ background:rgba(10,9,8,0.92); backdrop-filter:blur(10px); padding:14px 6vw; border-bottom:1px solid var(--line);}
+  .brandmark{display:flex; align-items:center; gap:12px;}
+  .brandmark .monogram{
+    width:38px;height:38px;border:1px solid var(--gold); border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Cinzel',serif; font-size:14px; color:var(--gold); letter-spacing:1px;
+  }
+  .brandmark span{ font-family:'Cinzel',serif; letter-spacing:0.28em; font-size:13px; color:var(--cream);}
+  nav ul{display:flex; gap:38px; list-style:none;}
+  nav a{font-size:12.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--cream-dim); position:relative; padding-bottom:4px;}
+  nav a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .35s ease;}
+  nav a:hover{color:var(--gold-lt);}
+  nav a:hover::after{width:100%;}
+  .nav-toggle{display:none; flex-direction:column; gap:5px; cursor:pointer; z-index:110;}
+  .nav-toggle span{width:24px;height:1px;background:var(--gold);}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative; min-height:100vh; display:flex; align-items:center;
+    padding:0 6vw;
+    background:
+      radial-gradient(ellipse 60% 50% at 82% 20%, rgba(201,162,75,0.10), transparent 60%),
+      radial-gradient(ellipse 50% 60% at 10% 90%, rgba(201,162,75,0.06), transparent 60%),
+      var(--black);
+    overflow:hidden;
+  }
+  .hero::before{ /* large ring motif echoing the brand mark */
+    content:'';
+    position:absolute; right:-18vw; top:50%; transform:translateY(-50%);
+    width:62vw; height:62vw; max-width:820px; max-height:820px;
+    border:1px solid var(--line); border-radius:50%;
+  }
+  .hero::after{
+    content:'';
+    position:absolute; right:-6vw; top:50%; transform:translateY(-38%);
+    width:40vw; height:40vw; max-width:540px; max-height:540px;
+    border:1px solid rgba(201,162,75,0.16); border-radius:50%;
+  }
+  .hero-inner{position:relative; z-index:2; max-width:640px; padding-top:70px;}
+  .eyebrow{
+    display:flex; align-items:center; gap:14px; margin-bottom:26px;
+    font-size:12px; letter-spacing:0.32em; text-transform:uppercase; color:var(--gold);
+  }
+  .eyebrow::before{content:'';width:36px;height:1px;background:var(--gold);}
+  .hero h1{
+    font-size:clamp(48px, 7vw, 92px); font-weight:500; line-height:1.02; color:var(--cream);
+  }
+  .hero h1 em{ font-style:italic; color:var(--gold-lt); font-weight:400;}
+  .hero p.lede{
+    margin-top:26px; max-width:460px; font-size:17px; line-height:1.75; color:var(--cream-dim); font-weight:300;
+  }
+  .hero-cta{display:flex; gap:18px; margin-top:44px; flex-wrap:wrap;}
+  .btn{
+    padding:15px 34px; font-size:12px; letter-spacing:0.18em; text-transform:uppercase;
+    border:1px solid var(--gold); border-radius:999px; transition:all .35s ease; white-space:nowrap;
+  }
+  .btn-solid{background:var(--gold); color:var(--black);}
+  .btn-solid:hover{background:var(--gold-lt); border-color:var(--gold-lt);}
+  .btn-ghost{color:var(--gold-lt);}
+  .btn-ghost:hover{background:rgba(201,162,75,0.1);}
+
+  .hero-tagline-ring{
+    position:absolute; z-index:3; right:9vw; top:16%;
+    width:190px; height:190px; border:1px solid var(--gold); border-radius:50%;
+    display:flex; align-items:center; justify-content:center; text-align:center;
+    animation: floaty 7s ease-in-out infinite;
+  }
+  .hero-tagline-ring p{font-family:'Cormorant Garamond',serif; font-size:15px; line-height:1.5; color:var(--cream); font-style:italic; padding:0 22px;}
+  .hero-tagline-ring b{color:var(--gold-lt); font-weight:500;}
+  @keyframes floaty{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
+
+  .scroll-cue{
+    position:absolute; bottom:40px; left:6vw; display:flex; align-items:center; gap:12px;
+    font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--cream-dim); z-index:3;
+  }
+  .scroll-cue .line{width:1px; height:34px; background:linear-gradient(var(--gold), transparent); animation:scrolldown 2s ease-in-out infinite;}
+  @keyframes scrolldown{0%{transform:scaleY(0); transform-origin:top;} 50%{transform:scaleY(1); transform-origin:top;} 51%{transform-origin:bottom;} 100%{transform:scaleY(0); transform-origin:bottom;}}
+
+  /* ---------- section shell ---------- */
+  section{ padding:130px 6vw; position:relative;}
+  .section-head{ max-width:640px; margin-bottom:70px;}
+  .section-head .eyebrow{margin-bottom:18px;}
+  .section-head h2{font-size:clamp(34px,4.2vw,54px); font-weight:500; color:var(--cream); line-height:1.1;}
+  .section-head p{margin-top:18px; color:var(--cream-dim); font-size:16px; line-height:1.75; max-width:520px;}
+
+  /* ---------- about / statement ---------- */
+  .statement{
+    display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  }
+  .statement-text p{
+    font-family:'Cormorant Garamond', serif; font-size:clamp(24px,2.4vw,32px); line-height:1.55; color:var(--cream); font-weight:400;
+  }
+  .statement-text p em{color:var(--gold-lt); font-style:italic;}
+  .statement-figure{
+    position:relative; height:340px; display:flex; align-items:center; justify-content:center;
+  }
+  .ring-cluster{position:relative; width:280px; height:280px;}
+  .ring-cluster .ring{position:absolute; border:1px solid var(--gold); border-radius:50%;}
+  .ring-cluster .r1{width:280px;height:280px; top:0; left:0; opacity:0.85;}
+  .ring-cluster .r2{width:170px;height:170px; top:70px; left:-40px; opacity:0.45; border-color:var(--gold-lt);}
+  .ring-cluster .r3{width:110px;height:110px; bottom:0; right:-20px; opacity:0.6;}
+  .ring-cluster .core{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    font-family:'Cinzel', serif; font-size:44px; letter-spacing:2px; color:var(--gold);
+    text-align:center; line-height:1;
+  }
+  .ring-cluster .core small{display:block; font-family:'Jost'; font-size:9px; letter-spacing:0.3em; color:var(--cream-dim); margin-top:10px; font-weight:400;}
+
+  /* ---------- categories ---------- */
+  .cat-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  .cat-card{
+    background:var(--black); padding:48px 30px; text-align:left; transition:background .4s ease;
+    position:relative; overflow:hidden;
+  }
+  .cat-card:hover{background:var(--panel);}
+  .cat-card .num{font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.2em; color:var(--gold-dim);}
+  .cat-card svg{width:34px; height:34px; margin:26px 0 20px; stroke:var(--gold); fill:none; stroke-width:1.1;}
+  .cat-card h3{font-family:'Cormorant Garamond',serif; font-size:23px; font-weight:500; color:var(--cream);}
+  .cat-card p{margin-top:10px; font-size:13.5px; color:var(--cream-dim); line-height:1.6;}
+
+  /* ---------- gallery (circular crop motif) ---------- */
+  .gallery-wrap{position:relative;}
+  .gallery-row{display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:32px; align-items:end;}
+  .gcircle{
+    position:relative; border-radius:50%; aspect-ratio:1/1; border:1px solid var(--gold);
+    display:flex; align-items:center; justify-content:center; overflow:hidden;
+    background:radial-gradient(circle at 30% 25%, #232019, #0a0908 70%);
+  }
+  .gcircle .inner{
+    text-align:center; padding:20px; font-family:'Cormorant Garamond', serif; color:var(--cream-dim);
+  }
+  .gcircle .inner span{display:block; font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.2em; color:var(--gold-lt); margin-bottom:8px;}
+  .gcircle.big{grid-row: span 2;}
+  .gcircle svg{width:38%; height:38%; stroke:var(--gold-lt); fill:none; stroke-width:0.9; opacity:0.9;}
+
+  /* ---------- delivery + closing statement band ---------- */
+  .band{
+    background:linear-gradient(120deg, #2a2210, #14110d 55%, #0a0908);
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    display:grid; grid-template-columns:1.6fr 1fr; align-items:center; gap:40px;
+    padding:80px 6vw;
+  }
+  .band p{font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2vw,26px); color:var(--cream); line-height:1.6;}
+  .band-badge{
+    justify-self:end; width:150px; height:150px; border-radius:50%; border:1px solid var(--gold);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;
+    background:rgba(10,9,8,0.5);
+  }
+  .band-badge svg{width:36px; stroke:var(--gold-lt); fill:none; stroke-width:1.2;}
+  .band-badge .caps{font-size:11px; color:var(--cream);}
+  .band-badge .caps.gold{color:var(--gold-lt); font-size:10px;}
+
+  /* ---------- locations ---------- */
+  .loc-grid{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line); border:1px solid var(--line);}
+  .loc-card{background:var(--black); padding:56px 44px;}
+  .loc-card .tag{font-family:'Cormorant Garamond',serif; font-style:italic; font-size:30px; color:var(--gold-lt); margin-bottom:22px; display:block;}
+  .loc-card .addr{display:flex; gap:14px; margin-bottom:18px;}
+  .loc-card .addr svg{width:18px; height:18px; flex-shrink:0; margin-top:3px; stroke:var(--gold); fill:none; stroke-width:1.3;}
+  .loc-card .addr p{font-size:15px; line-height:1.75; color:var(--cream-dim);}
+  .loc-card.soon{opacity:0.75;}
+  .pill{display:inline-block; margin-top:6px; padding:6px 16px; border:1px solid var(--gold-dim); border-radius:999px; font-size:10.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold);}
+
+  /* ---------- footer ---------- */
+  footer{padding:70px 6vw 40px; border-top:1px solid var(--line);}
+  .footer-top{display:flex; justify-content:space-between; flex-wrap:wrap; gap:40px; margin-bottom:60px;}
+  .footer-brand .monogram{width:52px;height:52px;border:1px solid var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Cinzel',serif; color:var(--gold); font-size:19px; margin-bottom:18px;}
+  .footer-brand h4{font-family:'Cinzel',serif; letter-spacing:0.24em; font-size:14px; color:var(--cream); margin-bottom:8px;}
+  .footer-brand p{font-size:13px; color:var(--cream-dim); max-width:260px; line-height:1.7;}
+  .footer-col h5{font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:18px;}
+  .footer-col a, .footer-col p{display:block; font-size:14px; color:var(--cream-dim); margin-bottom:12px;}
+  .footer-col a:hover{color:var(--gold-lt);}
+  .socials{display:flex; gap:14px; margin-top:6px;}
+  .socials a{width:36px; height:36px; border:1px solid var(--gold-dim); border-radius:50%; display:flex; align-items:center; justify-content:center;}
+  .socials a:hover{border-color:var(--gold);}
+  .socials svg{width:15px; height:15px; stroke:var(--gold-lt); fill:none; stroke-width:1.3;}
+  .footer-bottom{
+    padding-top:34px; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
+    font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold-dim);
+  }
+
+  /* ---------- reveal on scroll ---------- */
+  .reveal{opacity:0; transform:translateY(28px); transition:opacity .9s ease, transform .9s ease;}
+  .reveal.show{opacity:1; transform:translateY(0);}
+
+  @media (max-width: 980px){
+    .cat-grid{grid-template-columns:repeat(2,1fr);}
+    .statement{grid-template-columns:1fr;}
+    .gallery-row{grid-template-columns:1fr 1fr;}
+    .gcircle.big{grid-row:auto;}
+    .band{grid-template-columns:1fr;}
+    .band-badge{justify-self:start;}
+    .loc-grid{grid-template-columns:1fr;}
+  }
+  @media (max-width: 720px){
+    nav ul{display:none;}
+    .nav-toggle{display:flex;}
+    .hero::before,.hero::after{right:-40vw;}
+    .hero-tagline-ring{display:none;}
+    .cat-grid{grid-template-columns:1fr;}
+    section{padding:90px 6vw;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header id="header">
+  <div class="brandmark">
+    <div class="monogram">EG</div>
+    <span>Everything&nbsp;Grandeur</span>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#offerings">Offerings</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#locations">Locations</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="eyebrow">Beyond Expectation · Defined by Class</div>
+    <h1>Live <em>Grandeur.</em><br>Gift <em>Grandeur.</em><br>Be Grandeur.</h1>
+    <p class="lede">A curated space for classy fashion, luxury-inspired gifts, and timeless pieces — designed to make every moment feel special.</p>
+    <div class="hero-cta">
+      <a href="#offerings" class="btn btn-solid">Explore the Collection</a>
+      <a href="#locations" class="btn btn-ghost">Visit the Shop</a>
+    </div>
+  </div>
+  <div class="hero-tagline-ring">
+    <p>Classy. Timeless.<br>Unforgettable.<br><b>That's Grandeur</b></p>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><div class="line"></div></div>
+</section>
+
+<!-- ABOUT / STATEMENT -->
+<section id="about">
+  <div class="statement reveal">
+    <div class="statement-text">
+      <p>From stylish outfits to thoughtful gifting, we bring <em>sophistication</em>, warmth, and grandeur to your <em>everyday lifestyle.</em></p>
+    </div>
+    <div class="statement-figure">
+      <div class="ring-cluster">
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+        <div class="core">EG<small>Everything Grandeur</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFERINGS -->
+<section id="offerings">
+  <div class="section-head reveal">
+    <div class="eyebrow">What We Curate</div>
+    <h2>Four ways to feel grand.</h2>
+    <p>Every piece in the shop is chosen for the same reason: it makes an ordinary day feel a little more deliberate.</p>
+  </div>
+  <div class="cat-grid reveal">
+    <div class="cat-card">
+      <div class="num">01</div>
+      <svg viewBox="0 0 24 24"><path d="M9 3h6l2 4-2 2H9L7 7z"/><path d="M7 9l-3 12h16L17 9"/></svg>
+      <h3>Stylish Fashion</h3>
+      <p>Outfits and staple pieces built for a classic, put-together wardrobe.</p>
+    </div>
+    <div class="cat-card">
+      <div class="num">02</div>
+      <svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M3 12h18"/><path d="M12 8v13"/><path d="M12 8c-2 0-4-1.2-4-3.2S9.5 2 11 3s1 3.2 1 5zM12 8c2 0 4-1.2 4-3.2S13.5 2 12 3s-1 3.2 0 5z"/></svg>
+      <h3>Luxury Gifts</h3>
+      <p>Thoughtfully wrapped gifting, from perfume to jewellery, ready for any occasion.</p>
+    </div>
+    <div class="cat-card">
+      <div class="num">03</div>
+      <svg viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20"/><path d="M9 3l3 6-3 12"/><path d="M15 3l-3 6 3 12"/></svg>
+      <h3>Timeless Pieces</h3>
+      <p>Items chosen to outlast trends — the kind you reach for year after year.</p>
+    </div>
+    <div class="cat-card">
+      <div class="num">04</div>
+      <svg viewBox="0 0 24 24"><path d="M4 8l8-5 8 5v8l-8 5-8-5z"/><circle cx="12" cy="12" r="3"/></svg>
+      <h3>Sophistication Everyday</h3>
+      <p>Small everyday luxuries that make the ordinary feel intentional.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-head reveal">
+    <div class="eyebrow">Inside The Shop</div>
+    <h2>A closer look.</h2>
+  </div>
+  <div class="gallery-wrap reveal">
+    <div class="gallery-row">
+      <div class="gcircle big">
+        <div class="inner">
+          <span>Signature Gifting</span>
+          <svg viewBox="0 0 24 24" style="width:56px;height:56px;margin:0 auto 12px;display:block;"><rect x="4" y="9" width="16" height="12" rx="1"/><path d="M4 9V6a2 2 0 012-2h12a2 2 0 012 2v3"/><path d="M12 4v17"/><path d="M8 4c0-1.5 1.5-2.5 3-1s1 3-1 3H8zM16 4c0-1.5-1.5-2.5-3-1s-1 3 1 3h2z"/></svg>
+          Quilted bags, fine jewellery &amp; scent — boxed and ribboned.
+        </div>
+      </div>
+      <div class="gcircle">
+        <div class="inner">
+          <span>The Rail</span>
+          <svg viewBox="0 0 24 24" style="width:40px;height:40px;margin:0 auto 10px;display:block;"><path d="M3 8h18"/><path d="M6 8v11M10 8v11M14 8v11M18 8v11"/><path d="M9 4l3-2 3 2"/></svg>
+          Black &amp; cream staples, always on the hanger.
+        </div>
+      </div>
+      <div class="gcircle">
+        <div class="inner">
+          <span>Take-Home</span>
+          <svg viewBox="0 0 24 24" style="width:40px;height:40px;margin:0 auto 10px;display:block;"><path d="M6 8h12l1 12H5z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg>
+          Every purchase leaves in a Grandeur bag.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERY BAND -->
+<section style="padding:0;">
+  <div class="band reveal">
+    <p>"From stylish outfits to thoughtful gifting — we bring sophistication, warmth, and grandeur to your everyday lifestyle."</p>
+    <div class="band-badge">
+      <svg viewBox="0 0 24 24"><path d="M1 10h13v7H1z"/><path d="M14 13h4l4 3v1h-8z"/><circle cx="6" cy="19" r="1.6"/><circle cx="17.5" cy="19" r="1.6"/></svg>
+      <span class="caps">Deliveries</span>
+      <span class="caps gold">Available</span>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section id="locations">
+  <div class="section-head reveal">
+    <div class="eyebrow">Find Us</div>
+    <h2>Where Grandeur lives.</h2>
+  </div>
+  <div class="loc-grid reveal">
+    <div class="loc-card">
+      <span class="tag">Gweru Shop</span>
+      <div class="addr">
+        <svg viewBox="0 0 24 24"><path d="M12 21s7-7.2 7-12a7 7 0 10-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg>
+        <p>Cnr 7th and Lobengula Ave, Gweru<br>Enter through the durawall gate opposite NashPaints–Teecherz Shopping Complex.<br>Follow the signs to the shop.</p>
+      </div>
+    </div>
+    <div class="loc-card soon">
+      <span class="tag">Bulawayo</span>
+      <div class="addr">
+        <svg viewBox="0 0 24 24"><path d="M12 21s7-7.2 7-12a7 7 0 10-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg>
+        <p>Stay tuned for our Bulawayo location. More Grandeur, closer to you.</p>
+      </div>
+      <span class="pill">Coming Soon</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER / CONTACT -->
+<footer id="contact">
+  <div class="footer-top reveal">
+    <div class="footer-brand">
+      <div class="monogram">EG</div>
+      <h4>Everything Grandeur</h4>
+      <p>Beyond expectation. Defined by class. Grandeur.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Get In Touch</h5>
+      <a href="tel:+263771234567">+263 77 123 4567</a>
+      <p>Cnr 7th &amp; Lobengula Ave, Gweru</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 9h3V6h-3a3 3 0 00-3 3v2H9v3h2v6h3v-6h3l1-3h-4V9a1 1 0 011-1z"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M15 3v9.5a3.5 3.5 0 11-3-3.46V6.2A6.5 6.5 0 1018.5 9H15"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <a href="#offerings">Offerings</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#locations">Locations</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>@everything.grandeur</span>
+    <span>Live Grandeur · Gift Grandeur · Be Grandeur</span>
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+  }, { threshold: 0.15 });
+  reveals.forEach(r => io.observe(r));
+
+  const navToggle = document.getElementById('navToggle');
+  const navList = document.querySelector('nav ul');
+  navToggle.addEventListener('click', () => {
+    const open = navList.style.display === 'flex';
+    navList.style.cssText = open ? '' : 'display:flex;flex-direction:column;position:fixed;top:70px;right:6vw;background:#14110d;border:1px solid rgba(201,162,75,0.28);padding:24px 30px;gap:20px;border-radius:4px;';
+  });
+</script>
+
+</body>
+</html>
